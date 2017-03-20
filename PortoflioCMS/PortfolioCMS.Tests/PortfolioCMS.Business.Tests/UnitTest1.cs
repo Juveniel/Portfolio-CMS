@@ -6,7 +6,7 @@ namespace PortfolioCMS.Business.Tests
     public class UnitTest1
     {
         [Test]
-        public void TestMethod1()
+        public void TestMethod12()
         {
             var test = true;
 
