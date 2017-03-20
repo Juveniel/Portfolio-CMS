@@ -12,5 +12,13 @@ namespace PortfolioCMS.Business.Tests
 
             Assert.AreEqual(test, true);
         }
+
+        [Test]
+        public void TestMethod142()
+        {
+            var test = true;
+
+            Assert.AreEqual(test, true);
+        }
     }
 }
