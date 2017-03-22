@@ -10,8 +10,7 @@ namespace PortfolioCMS.Business.Tests
         {
             var test = true;
 
-            Assert.AreEqual(test, true);
-
+            Assert.AreEqual(test, true);       
         }
 
         [Test]
