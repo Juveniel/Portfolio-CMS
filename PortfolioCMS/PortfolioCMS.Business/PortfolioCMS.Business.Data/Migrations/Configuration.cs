@@ -1,4 +1,10 @@
 using System.Data.Entity.Migrations;
+using System.Linq;
+using System.Web.Configuration;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using PortfolioCMS.Business.Common.Constants;
+using PortfolioCMS.Business.Models;
 
 namespace PortfolioCMS.Business.Data.Migrations
 {
@@ -12,6 +18,39 @@ namespace PortfolioCMS.Business.Data.Migrations
 
         protected override void Seed(PortfolioCmsDbContext context)
         {
+            this.SeedRoles(context);
+            this.SeedAdminUser(context);
+        }
+
+        private void SeedRoles(PortfolioCmsDbContext context)
+        {
+            if (context.Roles.Any())
+            {
+                return;                
+            }
+
+            var roleStore = new RoleStore<IdentityRole>(context);
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+
+            var adminRole = new IdentityRole { Name = UserRoles.Administrator };
+
+            roleManager.Create(adminRole);
+        }
+
+        private void SeedAdminUser(PortfolioCmsDbContext context)
+        {
+            var userStore = new UserStore<ApplicationUser>(context);
+            var userManager = new UserManager<ApplicationUser>(userStore);
+
+            bool hasAdminUser = context.Users.Any(u => u.UserName == "admin");
+        
+            if (!hasAdminUser)
+            {
+                var admin = new ApplicationUser { UserName = "admin", Email = "admin@example.com" };
+
+                userManager.Create(admin, WebConfigurationManager.AppSettings["AdminPassword"]);
+                userManager.AddToRole(admin.Id, UserRoles.Administrator);
+            }
         }
     }
 }

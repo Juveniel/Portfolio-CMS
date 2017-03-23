@@ -1,15 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using PortfolioCMS.Business.Models.Users.Contracts;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace PortfolioCMS.Business.Models.Users
 {
-    public class Admin : IAdmin
+    public class Admin
     {
-        [Key, ForeignKey("ApplicationUser")]
-        public string Id { get; set; }
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        [Key]
+        public int Id { get; set; }
 
-        public bool IsDeleted { get; set; }
     }
 }

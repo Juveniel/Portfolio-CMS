@@ -29,8 +29,11 @@ namespace PortfolioCMS.Business.Identity
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
-                RequireLowercase = true,
-                RequireUppercase = true,
+                RequiredLength = 6,
+                RequireNonLetterOrDigit = false,
+                RequireDigit = false,
+                RequireLowercase = false,
+                RequireUppercase = false
             };
 
             // Configure user lockout defaults

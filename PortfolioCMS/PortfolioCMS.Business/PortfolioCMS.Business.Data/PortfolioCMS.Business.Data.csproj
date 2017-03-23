@@ -54,6 +54,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,6 +77,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PortfolioCMS.Business.Common\PortfolioCMS.Business.Common.csproj">
+      <Project>{CD5A5DCD-978D-4610-9596-2C965DA27A76}</Project>
+      <Name>PortfolioCMS.Business.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PortfolioCMS.Business.Models\PortfolioCMS.Business.Models.csproj">
       <Project>{BA7CDA96-160E-45FB-A434-E6BBF4358CA5}</Project>
       <Name>PortfolioCMS.Business.Models</Name>
