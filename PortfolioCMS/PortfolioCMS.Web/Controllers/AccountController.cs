@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using PortfolioCMS.Business.Identity;
 using PortfolioCMS.Web.Models;
+using PortfolioCMS.Web.Models.Account;
 
 namespace PortfolioCMS.Web.Controllers
 {
