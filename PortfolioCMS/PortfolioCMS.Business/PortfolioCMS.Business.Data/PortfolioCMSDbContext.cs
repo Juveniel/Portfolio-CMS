@@ -2,7 +2,8 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using PortfolioCMS.Business.Data.Contracts;
 using PortfolioCMS.Business.Models;
-using PortfolioCMS.Business.Models.Users;
+using PortfolioCMS.Business.Models.Content;
+using PortfolioCMS.Business.Models.Projects;
 
 namespace PortfolioCMS.Business.Data
 {
@@ -13,7 +14,15 @@ namespace PortfolioCMS.Business.Data
         {
         }
 
-        public virtual DbSet<Admin> Car { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+
+        public virtual DbSet<Tag> Tags { get; set; }
+
+        public virtual DbSet<Image> Images { get; set; }
+
+        public virtual DbSet<Project> Projects { get; set; }
+
+        public virtual DbSet<PageContent> Sections { get; set; }
 
         public static PortfolioCmsDbContext Create()
         {
