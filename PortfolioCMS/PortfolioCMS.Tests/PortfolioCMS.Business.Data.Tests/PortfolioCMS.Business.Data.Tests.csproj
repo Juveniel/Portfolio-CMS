@@ -55,6 +55,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="aqweqweqwe.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
