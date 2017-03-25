@@ -19,13 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Business.Model
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Business.Services", "PortfolioCMS.Business\PortfolioCMS.Business.Services\PortfolioCMS.Business.Services.csproj", "{B282FCF3-3D0A-4E8F-B213-3C3E73416E46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Business.Data.Tests", "PortfolioCMS.Business.Data.Tests\PortfolioCMS.Business.Data.Tests.csproj", "{45CD1D99-1D14-423D-B32B-54A138970938}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Business.Data.Tests", "PortfolioCMS.Tests\PortfolioCMS.Business.Data.Tests\PortfolioCMS.Business.Data.Tests.csproj", "{45CD1D99-1D14-423D-B32B-54A138970938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Business.Models.Tests", "PortfolioCMS.Business.Models.Tests\PortfolioCMS.Business.Models.Tests.csproj", "{B82914DE-1BCB-4587-9A45-AFEE0C85AD98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Business.Models.Tests", "PortfolioCMS.Tests\PortfolioCMS.Business.Models.Tests\PortfolioCMS.Business.Models.Tests.csproj", "{B82914DE-1BCB-4587-9A45-AFEE0C85AD98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Business.Services.Tests", "PortfolioCMS.Business.Services.Tests\PortfolioCMS.Business.Services.Tests.csproj", "{3B76D5B0-4DAC-4CCF-BA62-FC230316C8F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Business.Services.Tests", "PortfolioCMS.Tests\PortfolioCMS.Business.Services.Tests\PortfolioCMS.Business.Services.Tests.csproj", "{3B76D5B0-4DAC-4CCF-BA62-FC230316C8F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Web.Controllers.Tests", "PortfolioCMS.Web.Controllers.Tests\PortfolioCMS.Web.Controllers.Tests.csproj", "{0F4B66E0-7EAB-4AF4-9D36-91910CB143A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioCMS.Web.Controllers.Tests", "PortfolioCMS.Tests\PortfolioCMS.Web.Controllers.Tests\PortfolioCMS.Web.Controllers.Tests.csproj", "{0F4B66E0-7EAB-4AF4-9D36-91910CB143A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
