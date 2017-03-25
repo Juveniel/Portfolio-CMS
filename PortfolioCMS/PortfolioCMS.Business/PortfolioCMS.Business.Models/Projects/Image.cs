@@ -5,6 +5,7 @@ namespace PortfolioCMS.Business.Models.Projects
 {
     public class Image : IImage
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]

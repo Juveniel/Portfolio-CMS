@@ -6,6 +6,7 @@ namespace PortfolioCMS.Business.Models.Projects
 {
     public class Tag : ITag
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]

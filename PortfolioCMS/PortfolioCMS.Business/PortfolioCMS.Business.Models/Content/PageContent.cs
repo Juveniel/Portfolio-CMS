@@ -6,6 +6,7 @@ namespace PortfolioCMS.Business.Models.Content
 {
     public class PageContent : IPageContent
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]

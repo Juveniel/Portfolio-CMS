@@ -7,6 +7,7 @@ namespace PortfolioCMS.Business.Models.Projects
 {
     public class Comment : IComment
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]

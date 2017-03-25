@@ -20,6 +20,7 @@ namespace PortfolioCMS.Business.Models.Projects
             this.tags = new HashSet<Tag>();
         }    
 
+        [Key]
         public int Id { get; set; }
 
         [Required]
