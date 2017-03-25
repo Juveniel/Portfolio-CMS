@@ -1,4 +1,7 @@
-﻿using Ninject.Modules;
+﻿using System.Data.Entity;
+using Ninject;
+using Ninject.Modules;
+using Ninject.Web.Common;
 using PortfolioCMS.Business.Data;
 using PortfolioCMS.Business.Data.Contracts;
 using PortfolioCMS.Business.Data.Repositories;
@@ -10,9 +13,9 @@ namespace PortfolioCMS.Web.App_Start.NinjectBindings
     {
         public override void Load()
         {
-            this.Bind(typeof(IEFRepository<>)).To(typeof(EFRepository<>));
-            this.Bind<IPortfolioCmsDbContext>().To<PortfolioCmsDbContext>().InSingletonScope();
-            this.Bind<IUnitOfWork>().To<UnitOfWork>();
+            this.Bind<DbContext>().To<PortfolioCmsDbContext>().InRequestScope();
+            this.Bind(typeof(IEFRepository<>)).To(typeof(EFRepository<>)).InRequestScope();
+            this.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
         }
     }
 }
