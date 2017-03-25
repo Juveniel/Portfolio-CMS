@@ -7,7 +7,15 @@ namespace PortfolioCMS.Business.Services.Tests
     public class UnitTest1
     {
         [Test]
-        public void TestMethod1()
+        public void TestMethod156456()
+        {
+            var test = true;
+
+            Assert.AreEqual(test, true);
+        }
+
+        [Test]
+        public void Test423425Mejkthod1()
         {
             var test = true;
 
