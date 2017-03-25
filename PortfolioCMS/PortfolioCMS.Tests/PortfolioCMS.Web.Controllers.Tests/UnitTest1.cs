@@ -12,7 +12,6 @@ namespace PortfolioCMS.Web.Controllers.Tests
             var test = true;
 
             Assert.AreEqual(test, true);
-
         }
     }
 }
