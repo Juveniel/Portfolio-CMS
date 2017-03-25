@@ -65,7 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\Contracts\IRegistrationService.cs" />
+    <Compile Include="Projects\Contracts\IProjectService.cs" />
+    <Compile Include="Projects\ProjectService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

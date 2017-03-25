@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using PortfolioCMS.Business.Models.Projects.Contracts;
 
 namespace PortfolioCMS.Business.Models.Projects
 {
-    public class Image
+    public class Image : IImage
     {
         public int Id { get; set; }
 

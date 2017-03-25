@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using PortfolioCMS.Business.Common.Constants;
+using PortfolioCMS.Business.Models.Content.Contracts;
 
 namespace PortfolioCMS.Business.Models.Content
 {
-    public class PageContent
+    public class PageContent : IPageContent
     {
         public int Id { get; set; }
 

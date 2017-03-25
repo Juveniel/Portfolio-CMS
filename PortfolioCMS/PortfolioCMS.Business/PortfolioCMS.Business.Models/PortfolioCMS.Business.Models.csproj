@@ -57,8 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Content\Contracts\IPageContent.cs" />
     <Compile Include="Content\PageContent.cs" />
     <Compile Include="Projects\Comment.cs" />
+    <Compile Include="Projects\Contracts\IComment.cs" />
+    <Compile Include="Projects\Contracts\IImage.cs" />
+    <Compile Include="Projects\Contracts\IProject.cs" />
+    <Compile Include="Projects\Contracts\ITag.cs" />
     <Compile Include="Projects\Image.cs" />
     <Compile Include="Projects\Project.cs" />
     <Compile Include="Projects\Tag.cs" />

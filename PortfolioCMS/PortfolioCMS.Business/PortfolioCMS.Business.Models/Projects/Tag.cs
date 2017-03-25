@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using PortfolioCMS.Business.Common.Constants;
+using PortfolioCMS.Business.Models.Projects.Contracts;
 
 namespace PortfolioCMS.Business.Models.Projects
 {
-    public class Tag
+    public class Tag : ITag
     {
         public int Id { get; set; }
 

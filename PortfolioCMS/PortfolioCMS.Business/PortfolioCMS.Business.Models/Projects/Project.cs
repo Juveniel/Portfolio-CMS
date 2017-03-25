@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using PortfolioCMS.Business.Common.Constants;
 using PortfolioCMS.Business.Common.Enumerations;
+using PortfolioCMS.Business.Models.Projects.Contracts;
 
 namespace PortfolioCMS.Business.Models.Projects
 {
-    public class Project
+    public class Project : IProject
     {
         private ICollection<Comment> comments;
         private ICollection<Image> images;

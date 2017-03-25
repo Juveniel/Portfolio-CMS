@@ -16,10 +16,6 @@ namespace PortfolioCMS.Business.Data.UnitOfWork
 
         public void Dispose()
         {
-            if (this.context != null)
-            {
-                this.context.Dispose();
-            }
         }
 
         public void SaveChanges()
