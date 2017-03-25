@@ -1,13 +1,13 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace PortfolioCMS.Web.Controllers.Tests
+namespace PortfolioCMS.Business.Data.Tests
 {
     [TestFixture]
-    public class UnitTest1
+    public class aqweqweqwe
     {
         [Test]
-        public void TestMethod12()
+        public void TestMejkthod1()
         {
             var test = true;
 
@@ -15,7 +15,7 @@ namespace PortfolioCMS.Web.Controllers.Tests
         }
 
         [Test]
-        public void TestMej544645kthod1()
+        public void TestMasdasejkthod1()
         {
             var test = true;
 

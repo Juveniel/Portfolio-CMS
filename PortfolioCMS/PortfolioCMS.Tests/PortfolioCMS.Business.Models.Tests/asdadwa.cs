@@ -1,13 +1,15 @@
 ﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
-namespace PortfolioCMS.Business.Data.Tests
+namespace PortfolioCMS.Business.Models.Tests
 {
     [TestFixture]
-    public class UnitTest1
+    public class asdadwa
     {
         [Test]
-        public void TestMejkthod1()
+        public void TestMethjhgyhod1()
         {
             var test = true;
 
@@ -15,7 +17,7 @@ namespace PortfolioCMS.Business.Data.Tests
         }
 
         [Test]
-        public void TestMasdasejkthod1()
+        public void Te34534stMejkthod1()
         {
             var test = true;
 

@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace PortfolioCMS.Business.Services.Tests
 {
     [TestFixture]
-    public class UnitTest1
+    public class asdasasdasd
     {
         [Test]
         public void TestMethod156456()
