@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dimitar Kalaydzhiev">
+    <title>@ViewBag.Title - Administration</title>
+
+    @Styles.Render("~/Content/admin")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="wrapper">
+      
+        <div class="sidebar" data-color="blue" data-image="../Images/Admin/sidebar-1.jpg">
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class=@(ViewContext.RouteData.Values["controller"].ToString() == "Dashboard" ? "active" : "")>         
+                        @Html.ActionLink("Dashboard", "", "", null, new {area = "Admin", Href = "/Admin/Dashboard"})                 
+                    </li>
+                    <li class=@(ViewContext.RouteData.Values["controller"].ToString() == "ContentSections" ? "active" : "")>                             
+                        @Html.ActionLink("ContentSections", "Index", "ContentSections", null, new { area = "Admin", Href = "/Admin/ContentSections" })                      
+                    </li>
+                    <li class=@(ViewContext.RouteData.Values["controller"].ToString() == "Slider" ? "active" : "")>                 
+                        @Html.ActionLink("Slider", "Index", "Slider", null, new { area = "Admin", Href = "/Admin/Slider" })                            
+                 
+                    </li>
+                    <li class=@(ViewContext.RouteData.Values["controller"].ToString() == "Projects" ? "active" : "")>                            
+                        @Html.ActionLink("Projects", "Index", "Projects", null, new { area = "Admin", Href = "/Admin/Projects" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-panel">
+      
+            <nav class="navbar navbar-transparent navbar-absolute">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">My Portfolio</a>
+                    </div>
+                </div>
+            </nav>
+      
+            <div class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>        
+
+    @Scripts.Render("~/bundles/admin")
+</body>
+</html>

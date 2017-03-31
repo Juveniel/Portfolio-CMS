@@ -1,0 +1,93 @@
+﻿.my-work {
+    background-image: url("../../Images/Home/Work/accordion_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 155%;
+    background-attachment: scroll;
+    background-position: 85% 100%;    
+}
+
+.my-work .container {
+    position: relative;
+}
+
+.my-work .keypoints {
+    width: 50%;
+    float: right;
+    margin-left: 2.5%;
+    padding: 110px 0;
+}
+
+.my-work .keypoints h2 {
+    font-size: 30px;
+    color: #ffffff;
+    text-align: left;
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.my-work .panel {
+    border: 0;
+    background: transparent;
+}
+
+.my-work .panel-heading {
+    margin: 0;
+    padding: 0;
+}
+
+.my-work .accordion-toggle {
+    display: inline-flex;
+    width: 100%;
+    color: #ffffff;
+    background: #252b3f;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.my-work .panel-title {
+    line-height: 40px;
+}
+
+.my-work .accordion-toggle:before {
+    /* symbol for "opening" panels */
+    font-family: 'FontAwesome';
+    content: "\f068";
+    float: right;
+    color: inherit;
+    float: left;
+    font-weight: 400;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    margin-right: 20px;
+    background: #00f5c5;
+}
+
+.my-work .accordion-toggle.collapsed:before {
+    /* symbol for "collapsed" panels */
+    content: "\f067";
+    background: #2f364f;
+}
+
+.my-work .accordion-toggle {
+    background: #21c2f8;
+}
+
+.my-work .accordion-toggle.collapsed {
+    background: #252b3f;
+}
+
+.my-work .panel-body {
+    border: 0 !important;
+    color: #a1b1bc;
+}

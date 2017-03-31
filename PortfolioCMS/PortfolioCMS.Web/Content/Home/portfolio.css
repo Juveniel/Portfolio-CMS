@@ -1,0 +1,128 @@
+﻿.my-portfolio {
+    position: relative;
+    width: 100%;
+}
+
+.my-portfolio .header h2 {
+    font-size: 30px;
+    color: #2c3e50;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;
+    margin: 5px 0;
+    padding-top: 150px;
+}
+
+.my-portfolio .portfolio-list {
+    margin-top: 60px;
+}
+
+.my-portfolio .portfolio-item-sizer,
+.my-portfolio .portfolio-item {
+     width: 25%;
+}
+
+.my-portfolio .portfolio-item--width2 { 
+    width: 40%; 
+}
+
+.my-portfolio .portfolio-item img {
+    max-width: 100%;
+}
+
+.my-portfolio .portfolio-item {
+    -webkit-transition-property: -webkit-transform,opacity;
+    -moz-transition-property: -moz-transform,opacity;
+    transition-property: transform,opacity;
+
+}
+
+.my-portfolio .portfolio-item:hover .overlay {
+    background: #fff;
+    opacity: 1;
+}
+
+.my-portfolio .portfolio-item:hover .description {
+    opacity: 1;
+    bottom: 50%;
+}
+
+.my-portfolio .portfolio-item .description {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    border: none !important;
+    background: none !important;
+    text-align: center;
+    z-index: 3;
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.my-portfolio .portfolio-item .filter-image {
+    transition: all .2s linear;
+    background-color: #fafafa !important;
+    position: relative;
+    width: 100%;
+    transition: opacity .2s,transform .35s;
+    overflow: hidden;
+
+}
+
+.my-portfolio .portfolio-item .overlay {
+    display: block;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.my-portfolio .portfolio-item  .description h2 {
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 20px;
+    -ms-transition: all .2s linear;
+    transition: all .2s linear;
+    color: #444;
+}
+
+.my-portfolio .portfolio-item  .description h3 {
+    color: #1abc9c;
+    font-size: 14px;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    transition: all .2s linear;
+}
+
+.my-portfolio .portfolio-item  .description h2:hover {
+    color: #29d9c2;
+}
+
+.my-portfolio .load-more {
+    padding: 80px 247px;
+    background-color: #21c2f8;
+}
+
+.my-portfolio .load-more .container {
+    text-align: center;
+}
+
+.my-portfolio .load-more .text {
+    color: #fff;
+    font-size: 24px;
+    text-align: left;
+    font-family: Lato;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    margin-right: 30px;
+}

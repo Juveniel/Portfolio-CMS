@@ -1,0 +1,56 @@
+﻿.about-me .border-vertical {
+    background: #a1b1bc;
+    min-height: 85px;
+    width: 2px;
+    margin: 0 auto;
+}
+
+.about-me .header h2 {
+    font-size: 30px;
+    color: #2c3e50;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;
+    margin: 5px 0;
+}
+
+.about-me .content .image .wrapper {
+    max-width: 220px;
+    margin: 10px auto 15px;
+    border-radius: 100%;
+    border: 7px solid #ECF0F1;
+}
+
+.about-me .content .image .wrapper > img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 100%;
+}
+
+.about-me .content .subtitle h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;   
+}
+
+.about-me .content .description p {
+    color: #a1b1bc;
+    letter-spacing: 1px;
+}
+
+.about-me .content .description {
+    text-align: center;
+}
+
+.about-me .content .download-cv {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.about-me .content .download-cv > button {
+    margin-bottom: 5px;
+}
