@@ -1,5 +1,7 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using Bytes2you.Validation;
 using PortfolioCMS.Business.Data.Contracts;
 
@@ -45,6 +47,12 @@ namespace PortfolioCMS.Business.Data.Repositories
         public virtual IQueryable<T> All()
         {
             return this.Entities;
+        }
+
+        public T GetFirst(Expression<Func<T, bool>> filter)
+        {
+            var foundEntity = this.DbSet.FirstOrDefault(filter);
+            return foundEntity;
         }
 
         public virtual T GetById(object id)

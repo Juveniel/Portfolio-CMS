@@ -70,6 +70,8 @@
     <Compile Include="Images\ImageService.cs" />
     <Compile Include="Mappings\Contracts\IMappingService.cs" />
     <Compile Include="Mappings\MappingService.cs" />
+    <Compile Include="PageContents\Contracts\IPageContentService.cs" />
+    <Compile Include="PageContents\PageContentService.cs" />
     <Compile Include="Projects\Contracts\IProjectService.cs" />
     <Compile Include="Projects\ProjectService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

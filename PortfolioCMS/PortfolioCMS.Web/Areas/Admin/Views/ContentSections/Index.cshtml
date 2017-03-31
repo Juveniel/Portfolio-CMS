@@ -1,4 +1,33 @@
-﻿<div class="container-fluid">
+﻿@model PortfolioCMS.Web.Areas.Admin.Models.ContentSections.ContentSectionsListViewModel
+
+<div class="container-fluid">
     @Html.ActionLink("Create new section", "Create", "ContentSections", null, new { area = "Admin", Href = "/Admin/ContentSections/Create" })
     <h2>Content sections list</h2>
 </div>
+
+<table class="table table-hover">
+    <thead>
+        <th>#</th>
+        <th>Section Name</th>
+        <th>Title</th>
+        <th>ImagePath</th>
+        <th>Options</th>
+    </thead>
+    <tbody>
+        @{int i = 0;}
+        @foreach (var item in Model.ContentSections)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@item.SectionName</td>
+                <td>@item.Title</td>
+                <td>@item.Image</td>
+                <td>
+                    @Html.ActionLink("Edit section", "Edit", "ContentSections", null, new { area = "Admin", id= @item.Id, Href = "/Admin/ContentSections/Edit/" + @item.Id })
+                </td>
+            </tr>
+
+            i++;
+        }
+    </tbody>
+</table>

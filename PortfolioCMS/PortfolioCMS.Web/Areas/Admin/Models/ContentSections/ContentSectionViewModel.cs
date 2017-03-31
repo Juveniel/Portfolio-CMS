@@ -9,6 +9,8 @@ namespace PortfolioCMS.Web.Areas.Admin.Models.ContentSections
 {
     public class ContentSectionViewModel : IMapFrom<PageContent>, IHaveCustomMappings
     {
+        public int Id { get; set; }
+
         [DataType(DataType.Text)]
         [Required]
         public string SectionName { get; set; }
@@ -18,15 +20,18 @@ namespace PortfolioCMS.Web.Areas.Admin.Models.ContentSections
         public string Title { get; set; }
 
         [DataType(DataType.MultilineText)]
-        [Required(ErrorMessage = "Description is required")]
+        [Required]
         [AllowHtml]
         public string Content { get; set; }
 
-        public HttpPostedFileBase Image { get; set; }
+        public HttpPostedFileBase ImageFile { get; set; }
+
+        public string Image { get; set; }
          
         public void CreateMappings(IMapperConfigurationExpression configuration)
         {
-            configuration.CreateMap<ContentSectionViewModel, PageContent>();
+            configuration.CreateMap<ContentSectionViewModel, PageContent>()
+                .ForMember(d => d.Image, src => src.MapFrom(s => ("~/Images/PageContent/" + s.ImageFile.FileName)));
         }
     }
 }

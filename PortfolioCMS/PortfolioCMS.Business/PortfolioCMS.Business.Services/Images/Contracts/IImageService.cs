@@ -6,6 +6,8 @@ namespace PortfolioCMS.Business.Services.Images.Contracts
     {      
         bool IsImageFile(HttpPostedFileBase file);
 
-        string MapPath(string path);      
+        string MapPath(string path);
+
+        bool ProcessImage(HttpPostedFileBase imageToProcess);
     }
 }

@@ -13,7 +13,7 @@ namespace PortfolioCMS.Web.App_Start.NinjectBindings
     {
         public override void Load()
         {
-            this.Bind<DbContext>().To<PortfolioCmsDbContext>().InRequestScope();
+            this.Bind<IPortfolioCmsDbContext>().To<PortfolioCmsDbContext>().InRequestScope();
             this.Bind(typeof(IEFRepository<>)).To(typeof(EFRepository<>)).InRequestScope();
             this.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
         }

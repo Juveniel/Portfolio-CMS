@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace PortfolioCMS.Business.Data.Contracts
 {
@@ -7,6 +9,8 @@ namespace PortfolioCMS.Business.Data.Contracts
         IQueryable<T> Entities { get; }
 
         IQueryable<T> All();
+
+        T GetFirst(Expression<Func<T, bool>> filter);
 
         T GetById(object id);
 

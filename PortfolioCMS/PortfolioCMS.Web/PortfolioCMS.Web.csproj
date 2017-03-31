@@ -210,6 +210,8 @@
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProjectsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
+    <Compile Include="Areas\Admin\Models\ContentSections\ContentSectionListItemViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\ContentSections\ContentSectionsListViewModel.cs" />
     <Compile Include="Areas\Admin\Models\ContentSections\ContentSectionViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -281,6 +283,7 @@
     <Content Include="Areas\Admin\Views\Projects\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Projects\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Slider\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ContentSections\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="Scripts\External\isotope\isotope.pkgd.min.js" />
     <Content Include="Scripts\External\particles\particles.min.js" />
@@ -392,6 +395,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Images\PageContent\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
