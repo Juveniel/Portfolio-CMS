@@ -35,11 +35,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Core.4.0.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\..\packages\Moq.4.7.1\lib\net45\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Web" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -50,11 +58,36 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ImageServiceTests\IsImageFile_Should.cs" />
+    <Compile Include="ImageServiceTests\ProcessImage_Should.cs" />
+    <Compile Include="PageContentServiceTetsts\Constructor_Should.cs" />
+    <Compile Include="PageContentServiceTetsts\CreatePageContent_Should.cs" />
+    <Compile Include="PageContentServiceTetsts\FindById_Should.cs" />
+    <Compile Include="PageContentServiceTetsts\FindBySectionName_Should.cs" />
+    <Compile Include="PageContentServiceTetsts\GetAllPageContents_Should.cs" />
+    <Compile Include="PageContentServiceTetsts\UpdatePageContent_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PortfolioCMS.Business\PortfolioCMS.Business.Data\PortfolioCMS.Business.Data.csproj">
+      <Project>{C7028433-2C19-4AD3-9F37-E7874329F7A1}</Project>
+      <Name>PortfolioCMS.Business.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PortfolioCMS.Business\PortfolioCMS.Business.Models\PortfolioCMS.Business.Models.csproj">
+      <Project>{BA7CDA96-160E-45FB-A434-E6BBF4358CA5}</Project>
+      <Name>PortfolioCMS.Business.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PortfolioCMS.Business\PortfolioCMS.Business.Services\PortfolioCMS.Business.Services.csproj">
+      <Project>{B282FCF3-3D0A-4E8F-B213-3C3E73416E46}</Project>
+      <Name>PortfolioCMS.Business.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ImageServiceTests\TestFiles\testfile.png" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -34,8 +34,8 @@
                 </div>
                 <div class="form-group label-floating is-empty">
                     @Html.Label("Image", new { @class = "control-label" })
-                    @Html.TextBoxFor(m => m.ImageFile, new { type = "file", value = @Model.Image })
-                    <input type="hidden" name="Image" value="@Model.Image"/>
+                    @Html.TextBoxFor(m => m.ImageFile, new { type = "file" })
+                    @Html.TextBoxFor(m => m.Image, new { type = "text" })
                     <span class="material-input"></span>
                 </div>
                 <div class="form-group">

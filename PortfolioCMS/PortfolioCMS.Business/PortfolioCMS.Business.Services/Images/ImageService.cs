@@ -13,7 +13,7 @@ namespace PortfolioCMS.Business.Services.Images
         {
             if (file == null)
             {
-                return true;
+                return false;
             }
 
             var allowedExtensions = new[] { ".png", ".jpg", ".jpeg", ".bmp" };
@@ -36,17 +36,14 @@ namespace PortfolioCMS.Business.Services.Images
         {
             var isSuccessful = true;
 
-            if(imageToProcess != null)
+            if (imageToProcess != null && this.IsImageFile(imageToProcess))
             {
-                if (!this.IsImageFile(imageToProcess))
-                {
-                    isSuccessful = false;
-                }
-                else
-                {
-                    var path = this.MapPath(PageContentSavePath + imageToProcess.FileName);
-                    imageToProcess.SaveAs(path);
-                }                
+                var path = Path.Combine(PageContentSavePath + imageToProcess.FileName);
+                imageToProcess.SaveAs(path);
+            }
+            else
+            {
+                isSuccessful = false;
             }
 
             return isSuccessful;
