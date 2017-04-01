@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.1.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/Juveniel/Portfolio-CMS</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>true</concurrentBuild>
+  <builders>
+    <hudson.tasks.BatchFile>
+      <command>&quot;C:\Program Files (x86)\NuGet\Visual Studio 2015\nuget.exe&quot; restore &quot;C:\Program Files (x86)\Jenkins\workspace\PortfolioCMS Build\PortfolioCMS\PortfolioCMS.sln&quot;</command>
+    </hudson.tasks.BatchFile>
+    <hudson.plugins.msbuild.MsBuildBuilder plugin="msbuild@1.27">
+      <msBuildName>msbuild</msBuildName>
+      <msBuildFile>C:\Program Files (x86)\Jenkins\workspace\PortfolioCMS Build\PortfolioCMS\PortfolioCMS.sln</msBuildFile>
+      <cmdLineArgs>/p:Configuration=Release</cmdLineArgs>
+      <buildVariablesAsProperties>false</buildVariablesAsProperties>
+      <continueOnBuildFailure>false</continueOnBuildFailure>
+      <unstableIfWarnings>false</unstableIfWarnings>
+    </hudson.plugins.msbuild.MsBuildBuilder>
+    <hudson.tasks.BatchFile>
+      <command>&quot;C:\Program Files (x86)\NUnit.org\nunit-console\nunit3-console.exe&quot; &quot;C:\Program Files (x86)\Jenkins\workspace\PortfolioCMS Automatic Build\PortfolioCMS\PortfolioCMS.Tests\PortfolioCMS.Business.Data.Tests\bin\Release\PortfolioCMS.Business.Data.Tests.dll&quot; &quot;C:\Program Files (x86)\Jenkins\workspace\PortfolioCMS Automatic Build\PortfolioCMS\PortfolioCMS.Tests\PortfolioCMS.Business.Models.Tests\bin\Release\PortfolioCMS.Business.Models.Tests.dll&quot; &quot;C:\Program Files (x86)\Jenkins\workspace\PortfolioCMS Automatic Build\PortfolioCMS\PortfolioCMS.Tests\PortfolioCMS.Business.Services.Tests\bin\Release\PortfolioCMS.Business.Services.Tests.dll&quot; &quot;C:\Program Files (x86)\Jenkins\workspace\PortfolioCMS Automatic Build\PortfolioCMS\PortfolioCMS.Tests\PortfolioCMS.Web.Controllers.Tests\bin\Release\PortfolioCMS.Web.Controllers.Tests.dll&quot; --result=JunitTestResults.xml;transform=&quot;C:\Program Files (x86)\Jenkins\plugins\nunit\nunit3-xunit.xslt&quot;</command>
+    </hudson.tasks.BatchFile>
+    <hudson.plugins.msbuild.MsBuildBuilder plugin="msbuild@1.27">
+      <msBuildName>msbuild</msBuildName>
+      <msBuildFile>C:\Program Files (x86)\Jenkins\workspace\PortfolioCMS Build\PortfolioCMS\PortfolioCMS.sln</msBuildFile>
+      <cmdLineArgs>/p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=&quot;C:\Users\Mitko\Source\Repos\Portfolio-CMS\PortfolioCMS\PortfolioCMS.Web\Properties\PublishProfiles\local.pubxml&quot;</cmdLineArgs>
+      <buildVariablesAsProperties>false</buildVariablesAsProperties>
+      <continueOnBuildFailure>false</continueOnBuildFailure>
+      <unstableIfWarnings>false</unstableIfWarnings>
+    </hudson.plugins.msbuild.MsBuildBuilder>
+    <com.cloudbees.jenkins.GitHubSetCommitStatusBuilder plugin="github@1.26.1">
+      <statusMessage>
+        <content></content>
+      </statusMessage>
+      <contextSource class="org.jenkinsci.plugins.github.status.sources.DefaultCommitContextSource"/>
+    </com.cloudbees.jenkins.GitHubSetCommitStatusBuilder>
+  </builders>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.20">
+      <testResults>JunitTestResults.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.32">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>
